@@ -1,0 +1,150 @@
+[0m11:24:08.767177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416ac52f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416ac52c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416ac3ed90>]}
+
+
+============================== 11:24:08.784789 | 8324c211-ae7f-451a-976c-5871b0412712 ==============================
+[0m11:24:08.784789 [info ] [MainThread]: Running with dbt=1.10.9
+[0m11:24:08.789734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/user/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:24:08.862895 [info ] [MainThread]: dbt version: 1.10.9
+[0m11:24:08.868593 [info ] [MainThread]: python version: 3.11.14
+[0m11:24:08.873045 [info ] [MainThread]: python path: /home/user/miniconda3/envs/elt/bin/python
+[0m11:24:08.876876 [info ] [MainThread]: os info: Linux-6.12.88+deb13-amd64-x86_64-with-glibc2.41
+[0m11:24:36.793661 [info ] [MainThread]: Using profiles dir at /home/user/.dbt
+[0m11:24:36.794704 [info ] [MainThread]: Using profiles.yml file at /home/user/.dbt/profiles.yml
+[0m11:24:36.795556 [info ] [MainThread]: Using dbt_project.yml file at /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/dbt_project.yml
+[0m11:24:36.796336 [info ] [MainThread]: adapter type: bigquery
+[0m11:24:36.797087 [info ] [MainThread]: adapter version: 1.10.3
+[0m11:24:36.797872 [info ] [MainThread]: Configuration:
+[0m11:24:36.798620 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:24:36.799560 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:24:36.800991 [info ] [MainThread]: Required dependencies:
+[0m11:24:36.802660 [debug] [MainThread]: Executing "git --help"
+[0m11:24:36.810053 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:24:36.811089 [debug] [MainThread]: STDERR: "b''"
+[0m11:24:36.812281 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:24:36.813321 [info ] [MainThread]: Connection:
+[0m11:24:36.814373 [info ] [MainThread]:   method: oauth
+[0m11:24:36.815767 [info ] [MainThread]:   database: project-202325
+[0m11:24:36.816991 [info ] [MainThread]:   execution_project: project-202325
+[0m11:24:36.817972 [info ] [MainThread]:   schema: my_dbt_test
+[0m11:24:36.819658 [info ] [MainThread]:   location: US
+[0m11:24:36.820809 [info ] [MainThread]:   priority: interactive
+[0m11:24:36.821676 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m11:24:36.823338 [info ] [MainThread]:   impersonate_service_account: None
+[0m11:24:36.825034 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m11:24:36.826661 [info ] [MainThread]:   job_retries: 1
+[0m11:24:36.827900 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m11:24:36.829057 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m11:24:36.829887 [info ] [MainThread]:   timeout_seconds: 300
+[0m11:24:36.830695 [info ] [MainThread]:   client_id: None
+[0m11:24:36.831707 [info ] [MainThread]:   token_uri: None
+[0m11:24:36.832714 [info ] [MainThread]:   compute_region: None
+[0m11:24:36.833757 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m11:24:36.834972 [info ] [MainThread]:   gcs_bucket: None
+[0m11:24:36.836232 [info ] [MainThread]:   dataproc_batch: None
+[0m11:24:36.837926 [info ] [MainThread]: Registered adapter: bigquery=1.10.3
+[0m11:24:37.348688 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m11:24:37.349595 [debug] [MainThread]: On debug: select 1 as id
+[0m11:24:37.350368 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:24:43.045901 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-202325&j=bq:US:5c281778-42e6-4aad-8f4a-1c5de712766d&page=queryresults
+[0m11:24:44.281623 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:24:44.285932 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:24:44.288994 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/dbt_project.yml> not found
+
+[0m11:24:44.295392 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 35.972782, "process_in_blocks": "448816", "process_kernel_time": 9.315645, "process_mem_max_rss": "383988", "process_out_blocks": "40", "process_user_time": 21.564915}
+[0m11:24:44.307078 [debug] [MainThread]: Command `dbt debug` failed at 11:24:44.304336 after 35.99 seconds
+[0m11:24:44.312218 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:24:44.314771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416f52ce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416acc89d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4137bf8f90>]}
+[0m11:24:44.318191 [debug] [MainThread]: Flushing usage events
+[0m11:24:45.372257 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:26:54.867807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feafadb0f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feafb148ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feafaed1810>]}
+
+
+============================== 11:26:54.872515 | 3983d4f7-3622-4ca4-9e1c-d747623fddee ==============================
+[0m11:26:54.872515 [info ] [MainThread]: Running with dbt=1.10.9
+[0m11:26:54.873730 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/user/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m11:26:54.895035 [info ] [MainThread]: dbt version: 1.10.9
+[0m11:26:54.896736 [info ] [MainThread]: python version: 3.11.14
+[0m11:26:54.898319 [info ] [MainThread]: python path: /home/user/miniconda3/envs/elt/bin/python
+[0m11:26:54.899995 [info ] [MainThread]: os info: Linux-6.12.88+deb13-amd64-x86_64-with-glibc2.41
+[0m11:27:10.838689 [info ] [MainThread]: Using profiles dir at /home/user/.dbt
+[0m11:27:10.839604 [info ] [MainThread]: Using profiles.yml file at /home/user/.dbt/profiles.yml
+[0m11:27:10.840310 [info ] [MainThread]: Using dbt_project.yml file at /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/dbt_project.yml
+[0m11:27:10.840971 [info ] [MainThread]: adapter type: bigquery
+[0m11:27:10.841653 [info ] [MainThread]: adapter version: 1.10.3
+[0m11:27:11.311221 [info ] [MainThread]: Configuration:
+[0m11:27:11.312063 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:27:11.312768 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:27:11.313454 [info ] [MainThread]: Required dependencies:
+[0m11:27:11.314169 [debug] [MainThread]: Executing "git --help"
+[0m11:27:11.317493 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:27:11.319264 [debug] [MainThread]: STDERR: "b''"
+[0m11:27:11.320559 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:27:11.321949 [info ] [MainThread]: Connection:
+[0m11:27:11.323425 [info ] [MainThread]:   method: oauth
+[0m11:27:11.324935 [info ] [MainThread]:   database: project-202325
+[0m11:27:11.326284 [info ] [MainThread]:   execution_project: project-202325
+[0m11:27:11.327664 [info ] [MainThread]:   schema: my_dbt_test
+[0m11:27:11.329321 [info ] [MainThread]:   location: US
+[0m11:27:11.330663 [info ] [MainThread]:   priority: interactive
+[0m11:27:11.331995 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m11:27:11.333296 [info ] [MainThread]:   impersonate_service_account: None
+[0m11:27:11.334536 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m11:27:11.335869 [info ] [MainThread]:   job_retries: 1
+[0m11:27:11.337265 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m11:27:11.338791 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m11:27:11.340447 [info ] [MainThread]:   timeout_seconds: 300
+[0m11:27:11.342031 [info ] [MainThread]:   client_id: None
+[0m11:27:11.343647 [info ] [MainThread]:   token_uri: None
+[0m11:27:11.345409 [info ] [MainThread]:   compute_region: None
+[0m11:27:11.347164 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m11:27:11.348767 [info ] [MainThread]:   gcs_bucket: None
+[0m11:27:11.350236 [info ] [MainThread]:   dataproc_batch: None
+[0m11:27:11.352081 [info ] [MainThread]: Registered adapter: bigquery=1.10.3
+[0m11:27:11.755891 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m11:27:11.756667 [debug] [MainThread]: On debug: select 1 as id
+[0m11:27:11.757333 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:27:13.799229 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-202325&j=bq:US:1c0e1bb9-6815-4f3d-884d-298f3208e8d4&page=queryresults
+[0m11:27:14.694480 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:27:14.697231 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:27:14.699855 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 19.94801, "process_in_blocks": "0", "process_kernel_time": 6.109004, "process_mem_max_rss": "385784", "process_out_blocks": "32", "process_user_time": 14.457844}
+[0m11:27:14.701998 [debug] [MainThread]: Command `dbt debug` succeeded at 11:27:14.701517 after 19.95 seconds
+[0m11:27:14.704096 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:27:14.707522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feaff68ce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feafae4be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac7c69650>]}
+[0m11:27:14.709690 [debug] [MainThread]: Flushing usage events
+[0m11:27:15.752678 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:32:16.824656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a6af38d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a3e37b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a6d02390>]}
+
+
+============================== 11:32:16.829442 | 08a54d08-aac5-4704-aa74-ef7f5db46b8f ==============================
+[0m11:32:16.829442 [info ] [MainThread]: Running with dbt=1.10.9
+[0m11:32:16.830567 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/user/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:32:39.852932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd86a8b69d0>]}
+[0m11:32:39.984645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a6af9510>]}
+[0m11:32:39.985755 [info ] [MainThread]: Registered adapter: bigquery=1.10.3
+[0m11:32:40.366709 [debug] [MainThread]: checksum: 6543b8b248ceda473ef0d611849d5d909085b6b714afa9b515e9635faea7af23, vars: {}, profile: , target: , version: 1.10.9
+[0m11:32:40.368037 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:32:40.368966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd86a0c7c90>]}
+[0m11:32:41.673540 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_dbt_test.example
+[0m11:32:41.683786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd870d459d0>]}
+[0m11:32:41.769942 [debug] [MainThread]: Wrote artifact WritableManifest to /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/target/manifest.json
+[0m11:32:41.772591 [debug] [MainThread]: Wrote artifact SemanticManifest to /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/target/semantic_manifest.json
+[0m11:32:41.835034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd870d79690>]}
+[0m11:32:41.836479 [info ] [MainThread]: Found 495 macros
+[0m11:32:41.837300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08a54d08-aac5-4704-aa74-ef7f5db46b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd869fad690>]}
+[0m11:32:41.840050 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:32:41.841197 [debug] [MainThread]: Command end result
+[0m11:32:41.896193 [debug] [MainThread]: Wrote artifact WritableManifest to /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/target/manifest.json
+[0m11:32:41.898861 [debug] [MainThread]: Wrote artifact SemanticManifest to /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/target/semantic_manifest.json
+[0m11:32:41.904975 [debug] [MainThread]: Wrote artifact RunExecutionResult to /media/user/TRANSCEND/2_Projects/SCTP-DS3F/5m-data-2.5-data-warehouse/target/run_results.json
+[0m11:32:41.906385 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 25.199903, "process_in_blocks": "2720", "process_kernel_time": 10.032929, "process_mem_max_rss": "385336", "process_out_blocks": "3512", "process_user_time": 17.976486}
+[0m11:32:41.907631 [debug] [MainThread]: Command `dbt run` succeeded at 11:32:41.907419 after 25.20 seconds
+[0m11:32:41.908617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a868ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a87b1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd8a41f1350>]}
+[0m11:32:41.909510 [debug] [MainThread]: Flushing usage events
+[0m11:32:43.162967 [debug] [MainThread]: An error was encountered while trying to flush usage events
